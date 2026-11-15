@@ -22,4 +22,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: mylibrechatacr.azurecr.io/librechat-custom:v1
+          tags: librechatprodreg.azurecr.io/librechat-prod:v1
