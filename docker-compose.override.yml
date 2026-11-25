@@ -1,0 +1,6 @@
+  services:
+    api:
+      image: librechat-custom:latest
+      build:
+        context: .
+        dockerfile: Dockerfile
