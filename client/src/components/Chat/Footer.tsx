@@ -95,7 +95,7 @@ function Footer({ className, startupConfig, configuredOnly = false }: FooterProp
   /** The generic disclaimer is the part a conversation drops; the operator's own footer is not. */
   const genericFooter = configuredOnly
     ? ''
-    : '[LibreChat ' +
+    : '[Kotak AMC ' +
       Constants.VERSION +
       '](https://librechat.ai) - ' +
       localize('com_ui_latest_footer');

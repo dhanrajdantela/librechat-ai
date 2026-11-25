@@ -92,9 +92,11 @@ function AuthLayout({
       <Banner />
       <BlinkAnimation active={isFetching}>
         <div className="mt-6 h-10 w-full bg-cover">
+          1
           <img
             src="assets/logo.svg"
             className="h-full w-full object-contain"
+            style={{ height: '120%' }}
             alt={localize('com_ui_logo', { 0: startupConfig?.appTitle ?? 'LibreChat' })}
           />
         </div>

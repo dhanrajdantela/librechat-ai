@@ -1,4 +1,11 @@
 ### node etc ###
+node_modules
+client/node_modules
+api/node_modules
+packages/*/node_modules
+client/dist
+.git
+
 
 # Logs
 data-node

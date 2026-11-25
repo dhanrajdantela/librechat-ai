@@ -3,6 +3,7 @@
 # Base node image
 FROM docker.io/library/node:24.22.3-alpine AS node
 
+# RUN NODE_OPTIONS="--max-old-space-size=6144" npm run frontend
 RUN apk upgrade --no-cache
 RUN apk add --no-cache bash jemalloc
 RUN apk add --no-cache python3 py3-pip uv
@@ -59,11 +60,7 @@ RUN \
 COPY --chown=node:node . .
 
 ARG VITE_MCP_SANDBOX_URL=
-RUN \
-    # React client build with configurable memory
-    NODE_OPTIONS="--max-old-space-size=${NODE_MAX_OLD_SPACE_SIZE}" npm run frontend && \
-    npm prune --omit=dev --no-audit --no-fund && \
-    npm cache clean --force
+RUN NODE_OPTIONS="--max-old-space-size=6144" npm run frontend
 
 # Optional build metadata surfaced in Settings -> About for support triage.
 # Declared here (after the heavy install/build steps) so that commit/date
