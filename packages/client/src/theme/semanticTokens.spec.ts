@@ -86,12 +86,12 @@ describe('dark hover surface', () => {
 });
 
 describe('composer hover surface', () => {
-  it('keeps light hover unchanged and uses the lighter dark hover surface', () => {
+  it('uses the tinted light hover and the lighter dark hover surface', () => {
     const stockStyles = readFileSync(join(__dirname, 'defaults.css'), 'utf8');
 
-    expect(stockStyles).toMatch(/--surface-composer-hover:\s*var\(--gray-200\);/);
+    expect(stockStyles).toMatch(/--surface-composer-hover:\s*234 240 248;/);
     expect(stockStyles).toMatch(/--surface-composer-hover:\s*var\(--gray-600\);/);
-    expect(defaultTheme['rgb-surface-composer-hover']).toBe('227 227 227');
+    expect(defaultTheme['rgb-surface-composer-hover']).toBe('234 240 248');
     expect(darkTheme['rgb-surface-composer-hover']).toBe('66 66 66');
   });
 });
@@ -636,23 +636,26 @@ describe('switch track defaults', () => {
     ]);
   });
 
-  it('declares table column names on the secondary text they were before the role', () => {
+  it('uses muted light table headings and secondary dark headings', () => {
     const appStyles = readFileSync(join(__dirname, 'defaults.css'), 'utf8');
 
     expect([...appStyles.matchAll(/--table-header-text:\s*([^;]+);/g)].map((m) => m[1])).toEqual([
+      'var(--text-muted)',
       'var(--text-secondary)',
     ]);
-    expect(defaultTheme['rgb-table-header-text']).toBe(defaultTheme['rgb-text-secondary']);
+    expect(defaultTheme['rgb-table-header-text']).toBe(defaultTheme['rgb-text-muted']);
     expect(darkTheme['rgb-table-header-text']).toBe(darkTheme['rgb-text-secondary']);
   });
 
-  it('declares the self-sticking header fill on the dialog surface it was before the role', () => {
+  it('uses the reference table fill in light mode and the dialog surface in dark mode', () => {
     const appStyles = readFileSync(join(__dirname, 'defaults.css'), 'utf8');
 
     expect([...appStyles.matchAll(/--table-header-fill:\s*([^;]+);/g)].map((m) => m[1])).toEqual([
+      '247 249 252',
       'var(--surface-dialog)',
     ]);
-    [defaultTheme, darkTheme, highContrastLightTheme, highContrastDarkTheme].forEach((theme) =>
+    expect(defaultTheme['rgb-table-header-fill']).toBe('247 249 252');
+    [darkTheme, highContrastLightTheme, highContrastDarkTheme].forEach((theme) =>
       expect(theme['rgb-table-header-fill']).toBe(theme['rgb-surface-dialog']),
     );
   });
@@ -764,15 +767,15 @@ describe.each([
 });
 
 describe('focus role defaults', () => {
-  /** The default theme's outline was literal black and white and its primitives
-   *  drew their ring in the primary ink; the roles reproduce both. */
-  it('reproduces the outline and ring the default theme drew before the roles', () => {
+  /** The light outline and control ring use the reference navy; dark mode keeps its
+   *  existing white outline and primary-ink ring. */
+  it('uses high-contrast palette-aware outlines in both modes', () => {
     expect([defaultTheme['rgb-focus-outline'], darkTheme['rgb-focus-outline']]).toEqual([
-      '0 0 0',
+      '0 56 116',
       '255 255 255',
     ]);
     expect([defaultTheme['rgb-focus-control'], darkTheme['rgb-focus-control']]).toEqual([
-      defaultTheme['rgb-text-primary'],
+      defaultTheme['rgb-accent-primary'],
       darkTheme['rgb-text-primary'],
     ]);
   });

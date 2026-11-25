@@ -79,7 +79,7 @@ html {
   --brand-purple: 126 34 206;
   --avatar-fill: 121 137 255;
   --avatar-text: var(--text-primary);
-  --avatar-placeholder: var(--surface-secondary);
+  --avatar-placeholder: var(--surface-primary-alt);
   --avatar-edge: 240 246 252;
   --illustration-subtle: 175 193 255;
   --illustration: 121 137 255;
@@ -93,54 +93,54 @@ html {
   --file-generic: 0 0 255;
   --file-ink: 255 255 255;
   --presentation: var(--white);
-  --text-primary: var(--gray-800);
-  --text-secondary: var(--gray-600);
-  --text-secondary-alt: var(--gray-500);
-  --text-tertiary: var(--gray-500);
-  --text-muted: 105 110 121; /* Click UI global.color.text.muted #696e79 */
+  --text-primary: 26 36 51; /* #1a2433 */
+  --text-secondary: 59 71 90; /* #3b475a */
+  --text-secondary-alt: 92 110 137; /* #5c6e89 (darkened for AA contrast) */
+  --text-tertiary: 92 110 137; /* #5c6e89 (darkened for AA contrast) */
+  --text-muted: 92 110 137; /* #5c6e89 (darkened for AA contrast) */
   --badge-label: var(--text-primary);
   --shimmer-dip: 129 130 134;
   --shimmer-dip-alpha: 0.18;
-  --text-warning: var(--amber-700);
-  --text-destructive: var(--red-600);
-  --link: var(--blue-600);
-  --link-hover: var(--blue-700);
+  --text-warning: 157 84 22; /* #9d5416 */
+  --text-destructive: 200 20 27; /* #c8141b */
+  --link: 0 56 116; /* #003874 */
+  --link-hover: 11 37 69; /* #0b2545 */
   --scrollbar-thumb: var(--black);
   --scrollbar-thumb-alpha: 0.1;
   --page-canvas: var(--surface-primary-alt);
   --select-fill: var(--white);
   --select-edge: 142 142 160;
   --button-neutral-border: var(--black);
-  --button-neutral-text: 64 65 79;
-  --button-neutral-hover: var(--gray-20);
-  --link-inline: 0 102 204;
+  --button-neutral-text: 59 71 90; /* #3b475a */
+  --button-neutral-hover: 234 240 248; /* #eaf0f8 */
+  --link-inline: 0 56 116; /* #003874 */
   --toast-edge: 67 90 111;
   --stroke-ink: var(--black);
   --stroke-ink-alpha: 0.1;
   --link-visited: 147 51 234;
   --link-prose: var(--link);
-  --accent-primary: 18 110 107;
-  --accent-primary-hover: 10 79 83;
-  --ring-primary: var(--gray-500);
-  --focus-outline: 0 0 0;
+  --accent-primary: 0 56 116; /* #003874 */
+  --accent-primary-hover: 11 37 69; /* #0b2545 */
+  --ring-primary: 0 56 116; /* #003874 */
+  --focus-outline: 0 56 116; /* #003874 */
   --header-primary: var(--white);
-  --header-hover: var(--gray-50);
-  --header-button-hover: var(--gray-50);
-  --surface-active: var(--gray-100);
-  --surface-active-alt: var(--gray-200);
-  --surface-hover: var(--gray-200);
-  --surface-hover-alt: var(--gray-300);
-  --surface-pressed: var(--gray-200);
-  --surface-composer-hover: var(--gray-200);
+  --header-hover: 234 240 248; /* #eaf0f8 */
+  --header-button-hover: 234 240 248; /* #eaf0f8 */
+  --surface-active: 234 240 248; /* #eaf0f8 */
+  --surface-active-alt: 213 224 239; /* #d5e0ef */
+  --surface-hover: 234 240 248; /* #eaf0f8 */
+  --surface-hover-alt: 213 224 239; /* #d5e0ef */
+  --surface-pressed: 234 240 248; /* #eaf0f8 (matching surface-hover) */
+  --surface-composer-hover: 234 240 248; /* #eaf0f8 */
   --surface-primary: var(--white);
   /* Light widgets sit on the page surface and its light rule; dark mode lifts them (below). */
   --chart-widget-surface: var(--surface-primary);
-  --chart-widget-stroke: var(--border-light);
-  --surface-primary-alt: var(--gray-50);
-  --surface-primary-contrast: var(--gray-100);
-  --surface-secondary: var(--gray-50);
-  --surface-secondary-alt: var(--gray-200);
-  --surface-tertiary: var(--gray-100);
+  --chart-widget-stroke: 227 232 239; /* #e3e8ef */
+  --surface-primary-alt: 243 245 249; /* #f3f5f9 */
+  --surface-primary-contrast: 234 240 248; /* #eaf0f8 */
+  --surface-secondary: var(--white);
+  --surface-secondary-alt: 238 241 246; /* #eef1f6 */
+  --surface-tertiary: 234 240 248; /* #eaf0f8 */
   --surface-tertiary-alt: var(--white);
   --surface-dialog: var(--white);
   --dialog-title: var(--text-primary);
@@ -149,10 +149,10 @@ html {
   --text-on-media: var(--white);
   --surface-media-chip: var(--white);
   --surface-media-chip-alpha: 0.75;
-  --surface-submit: var(--green-700);
-  --surface-submit-hover: var(--green-800);
-  --surface-destructive: var(--red-700);
-  --surface-destructive-hover: var(--red-800);
+  --surface-submit: 200 20 27; /* #c8141b */
+  --surface-submit-hover: 169 17 24; /* #a91118 */
+  --surface-destructive: 200 20 27; /* #c8141b */
+  --surface-destructive-hover: 169 17 24; /* #a91118 */
   --surface-chat: var(--white);
   --surface-code: var(--surface-primary-alt);
   --surface-code-body: var(--surface-chat);
@@ -160,10 +160,10 @@ html {
   --prose-bullet: var(--border-medium);
   --prose-quote-bar: var(--border-medium);
   --surface-qr: var(--white);
-  --border-light: var(--gray-200);
+  --border-light: 227 232 239; /* #e3e8ef */
   --border-light-alpha: 1;
-  --border-medium-alt: var(--gray-300);
-  --border-medium: var(--gray-300);
+  --border-medium-alt: 213 224 239; /* #d5e0ef */
+  --border-medium: 213 224 239; /* #d5e0ef */
   --border-medium-alpha: 1;
   --border-heavy: var(--gray-400);
   --border-heavy-alpha: 1;
@@ -171,8 +171,8 @@ html {
   --border-xheavy-alpha: 1;
   /* The drawer's own fill: the scrim separates it in light. */
   --drawer-edge: var(--surface-sidebar);
-  --border-destructive: var(--red-600);
-  --border-control: var(--gray-200);
+  --border-destructive: 237 28 36; /* #ed1c24 */
+  --border-control: 213 224 239; /* #d5e0ef */
   --border-field-focus: var(--focus-control);
   --focus-subtle: var(--border-heavy);
   --field-fill: var(--surface-primary);
@@ -186,37 +186,37 @@ html {
   --surface-user-message: var(--surface-tertiary);
   --surface-card: var(--surface-secondary);
   --surface-card-hover: var(--surface-tertiary);
-  --surface-nav-hover: var(--surface-active-alt);
+  --surface-nav-hover: var(--surface-active);
   --surface-nav-selected: var(--surface-active-alt);
   --surface-tab-selected: var(--surface-tertiary);
   --surface-menu: var(--presentation);
   --surface-popover: var(--surface-primary);
   --border-menu: var(--border-light);
   --surface-composer: var(--surface-chat);
-  --surface-search: var(--surface-secondary);
+  --surface-search: var(--surface-primary);
   --surface-sidebar: var(--surface-primary-alt);
-  --focus-control: var(--gray-800);
+  --focus-control: 0 56 116; /* #003874 */
   --border-disabled: var(--gray-200);
   --status-success: var(--green-700);
-  --status-success-subtle: var(--green-50);
+  --status-success-subtle: 230 244 238; /* #e6f4ee */
   --status-success-border: var(--green-300);
   --status-success-strong: 2 133 94;
-  --status-info: var(--blue-600);
-  --status-info-subtle: var(--blue-50);
-  --status-info-border: var(--blue-300);
-  --status-info-strong: var(--gray-500);
-  --status-warning: var(--amber-700);
-  --status-warning-subtle: var(--amber-50);
-  --status-warning-border: var(--amber-300);
+  --status-info: 0 56 116; /* #003874 */
+  --status-info-subtle: 234 240 248; /* #eaf0f8 */
+  --status-info-border: 213 224 239; /* #d5e0ef */
+  --status-info-strong: 11 37 69; /* #0b2545 */
+  --status-warning: 157 84 22; /* #9d5416 */
+  --status-warning-subtle: 254 243 234; /* #fef3ea */
+  --status-warning-border: 244 162 97; /* #f4a261 */
   --status-warning-strong: 199 82 9;
-  --status-error: var(--red-700);
-  --status-error-subtle: var(--red-50);
-  --status-error-border: var(--red-300);
-  --status-error-strong: 224 47 31;
+  --status-error: 200 20 27; /* #c8141b */
+  --status-error-subtle: 253 236 236; /* #fdecec */
+  --status-error-border: 243 183 185; /* #f3b7b9 */
+  --status-error-strong: 200 20 27; /* #c8141b */
   --status-neutral: var(--gray-600);
   --status-neutral-subtle: var(--gray-100);
   --status-neutral-border: var(--gray-300);
-  --status-verified: 37 99 235;
+  --status-verified: 0 56 116; /* #003874 */
   --text-on-status: var(--white);
   --text-disabled: var(--gray-400);
 
@@ -246,9 +246,9 @@ html {
   --syntax-attr: 154 47 106;
   --syntax-title: 180 35 24;
 
-  --surface-inverted: var(--gray-850);
-  --surface-inverted-hover: var(--gray-700);
-  --surface-inverted-pressed: var(--gray-700);
+  --surface-inverted: 0 56 116; /* #003874 */
+  --surface-inverted-hover: 11 37 69; /* #0b2545 */
+  --surface-inverted-pressed: 11 37 69; /* #0b2545 */
   --button-primary: var(--surface-inverted);
   --button-primary-hover: var(--surface-inverted-hover);
   --surface-disabled: var(--gray-100);
@@ -382,8 +382,8 @@ html {
   --switch-unchecked: 148 148 148;
   --switch-thumb: 255 255 255;
   /* Follows the secondary text it was before it had a role, in every mode. */
-  --table-header-text: var(--text-secondary);
-  --table-header-fill: var(--surface-dialog);
+  --table-header-text: var(--text-muted);
+  --table-header-fill: 247 249 252; /* #f7f9fc */
   --provider-openai: #19c37d;
   --provider-openai-gpt4: #ab68ff;
   --provider-openai-reasoning: #000000;
@@ -411,6 +411,8 @@ html {
   --file-ink: 255 255 255;
   --presentation: var(--gray-800);
   --text-primary: var(--gray-100);
+  --ring-primary: var(--gray-500);
+  --table-header-text: var(--text-secondary);
   --focus-outline: 255 255 255;
   --text-secondary: var(--gray-300);
   --text-secondary-alt: var(--gray-400);
@@ -527,6 +529,7 @@ html {
   --status-neutral-subtle: var(--gray-800);
   --status-neutral-border: var(--gray-700);
   --status-verified: 26 127 216;
+  --table-header-fill: var(--surface-dialog);
   --text-on-status: var(--white);
 
   /* Categorical series scale: same hues, stepped for the dark surface */
