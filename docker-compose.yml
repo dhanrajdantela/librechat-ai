@@ -37,6 +37,7 @@ services:
       - ./logs:/app/logs
       - ./skill:/app/skill
       - librechat-data:/app/data
+      - ./librechat.yaml:/app/librechat.yaml
   admin-panel:
     container_name: admin-panel
     image: registry.librechat.ai/librechat-ai/librechat-admin-panel:latest
