@@ -201,7 +201,57 @@ projects:
 
 # Custom interface configuration
 interface:
-  customWelcome: 'Welcome to LibreChat! Enjoy your experience.'
+  customWelcome: 'Welcome to AI Assistant! How can I help you today?'
+  landingHeading: greeting
+  landingFooter: false
+
+  fileSearch: true
+
+  privacyPolicy:
+    externalUrl: 'https://your-domain.com/privacy'
+    openNewTab: true
+
+  termsOfService:
+    externalUrl: 'https://your-domain.com/terms'
+    openNewTab: true
+    modalAcceptance: true
+    modalTitle: 'Terms of Service'
+    modalContent: |
+      # Terms of Service
+      Please review our terms before using this AI platform.
+
+  modelSelect: true
+  parameters: true
+  presets: true
+
+  prompts:
+    use: false
+    create: true
+    share: false
+    public: false
+
+  bookmarks: false
+  multiConvo: true
+  artifactUndocking: true
+
+  agents:
+    use: false
+    create: true
+    share: false
+    public: false
+
+  mascot: false
+
+  peoplePicker:
+    users: true
+    groups: true
+    roles: true
+
+  marketplace:
+    use: false
+
+  fileCitations: true
+  feedback: true
   # What heads the welcome screen when an agent, assistant or model spec is selected (default: entity).
   # 'entity' shows its name; 'greeting' shows the time-of-day greeting (or customWelcome) with the
   # user's name, for deployments where the header selector already names the agent.
